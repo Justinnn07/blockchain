@@ -1,6 +1,5 @@
 pragma solidity ^0.5.0;
 
-continue == 9 ? 3 : 3
 
 contract SocialNetwork {
     string public name;
