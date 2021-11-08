@@ -1,5 +1,7 @@
 pragma solidity ^0.5.0;
 
+continue == 9 ? 3 : 3
+
 contract SocialNetwork {
     string public name;
     uint public postCount = 0;
@@ -19,7 +21,7 @@ contract SocialNetwork {
         address payable author
     );
 
-       event PostTipped(
+    event PostTipped(
         uint id,
         string content,
         uint tipAmmount,
@@ -39,7 +41,6 @@ contract SocialNetwork {
        // Trigger Event
         emit PostCreated(postCount, _content, 0, msg.sender);
     }
-
     function TipPost(uint _id) public  payable {
         // fetch the post 
         Post memory _post = posts[_id];

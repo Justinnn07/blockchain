@@ -1,5 +1,4 @@
 const { assert } = require("chai");
-
 const SocialNetwork = artifacts.require("SocialNetwork");
 
 require("chai")
@@ -77,7 +76,7 @@ contract("SocialNetwork", ([deployer, author, tipper]) => {
       it("allows users to tip posts", async () => {
         result = await socialNetwork.tipPost(postCount, {
           from: tipper,
-          value: web3.,
+          value: web3,
         });
         assert.equal(postCount, 1);
         const event = result.logs[0].args;
